@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Basic Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #1e1e1e;
+            color: white;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Arial', sans-serif;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Adding Crystal Star Effect */
+        .crystal-star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            animation: twinkle 1.5s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0.2;
+            }
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 25px;
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+
+        /* Crystal Effect Box */
+        .box {
+            margin: 30px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.6);
+        }
+
+        /* Section for Personal Info */
+        .personal-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        .personal-info .info-card {
+            background: rgba(255, 255, 255, 0.1);
+            width: 200px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            margin: 10px;
+        }
+
+        .personal-info .info-card i {
+            font-size: 40px;
+            color: #ff6f61;
+            margin-bottom: 15px;
+        }
+
+        /* Add Picture Section */
+        .picture {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .picture img {
+            width: 250px;
+            border-radius: 50%;
+            border: 5px solid #ff6f61;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Skills Section */
+        .skills {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .skills .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 200px;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add Background for the Stars */
+        .background-stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Dr. Assad Sarfraz Qureshi</h1>
+        <h2>Professional Medical Portfolio</h2>
+        <div class="background-stars">
+            <!-- Random Crystal Stars -->
+            <div class="crystal-star" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
+            <div class="crystal-star" style="top: 50%; left: 30%; animation-delay: 0.5s;"></div>
+            <div class="crystal-star" style="top: 70%; left: 60%; animation-delay: 1s;"></div>
+            <div class="crystal-star" style="top: 20%; left: 80%; animation-delay: 0.3s;"></div>
+            <div class="crystal-star" style="top: 40%; left: 90%; animation-delay: 1.2s;"></div>
+        </div>
+    </div>
+
+    <!-- Personal Information Section -->
+    <div class="personal-info">
+        <div class="info-card fade-in">
+            <i class="fas fa-birthday-cake"></i>
+            <h3>Age</h3>
+            <p>30</p>
+        </div>
+        <div class="info-card fade-in" style="animation-delay: 0.2s;">
+            <i class="fas fa-venus-mars"></i>
+            <h3>Gender</h3>
+            <p>Male</p>
+        </div>
+        <div class="info-card fade-in" style="animation-delay: 0.4s;">
+            <i class="fas fa-tint"></i>
+            <h3>Blood Group</h3>
+            <p>O+</p>
+        </div>
+        <div class="info-card fade-in" style="animation-delay: 0.6s;">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Education</h3>
+            <p>MBBS</p>
+        </div>
+        <div class="info-card fade-in" style="animation-delay: 0.8s;">
+            <i class="fas fa-globe"></i>
+            <h3>Country</h3>
+            <p>USA</p>
+        </div>
+        <div class="info-card fade-in" style="animation-delay: 1s;">
+            <i class="fas fa-users"></i>
+            <h3>Marital Status</h3>
+            <p>Married</p>
+        </div>
+    </div>
+
+    <!-- Picture Section -->
+    <div class="picture">
+        <img src="Asad Bi hd.png" alt="Dr. John Doe">
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills">
+        <h2>Skills</h2>
+        <div class="skill-card fade-in">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Medical Expertise</h3>
+            <p>Surgeries, Diagnoses, Patient Care</p>
+        </div>
+        <div class="skill-card fade-in" style="animation-delay: 0.3s;">
+            <i class="fas fa-brain"></i>
+            <h3>Research</h3>
+            <p>Medical Research, Innovations</p>
+        </div>
+        <div class="skill-card fade-in" style="animation-delay:
+0.6s;">
+            <i class="fas fa-laptop-medical"></i>
+            <h3>Technology</h3>
+            <p>Medical Equipment, Digital Solutions</p>
+        </div>
+    </div>
+
+    <!-- Achievements Section -->
+    <div class="skills">
+        <h2>Achievements</h2>
+        <div class="skill-card fade-in">
+            <i class="fas fa-award"></i>
+            <h3>Award Winner</h3>
+            <p>Best Surgeon of the Year 2023</p>
+        </div>
+        <div class="skill-card fade-in" style="animation-delay: 0.3s;">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h3>Community Service</h3>
+            <p>100+ Free Health Camps</p>
+        </div>
+        <div class="skill-card fade-in" style="animation-delay: 0.6s;">
+            <i class="fas fa-user-md"></i>
+            <h3>Experience</h3>
+            <p>15+ Years in Medical Practice</p>
+        </div>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div class="skills">
+        <h2>Hobbies</h2>
+        <div class="skill-card fade-in">
+            <i class="fas fa-book"></i>
+            <h3>Reading</h3>
+            <p>Medical Journals, Fiction</p>
+        </div>
+        <div class="skill-card fade-in" style="animation-delay: 0.3s;">
+            <i class="fas fa-hiking"></i>
+            <h3>Hiking</h3>
+            <p>Mountain Adventures</p>
+        </div>
+        <div class="skill-card fade-in" style="animation-delay: 0.6s;">
+            <i class="fas fa-music"></i>
+            <h3>Music</h3>
+            <p>Playing Guitar</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="header">
+        <h2>Contact Me</h2>
+        <p>Email: john.doe@example.com | Phone: +1 234 567 890</p>
+        <div>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-2x" style="color: #fff; margin: 10px;"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter fa-2x" style="color: #fff; margin: 10px;"></i></a>
+            <a href="https://www.github.com/" target="_blank"><i class="fab fa-github fa-2x" style="color: #fff; margin: 10px;"></i></a>
+        </div>
+    </div>
+
+    <script>
+        // Adding Scroll Animations for Fade-In Effect
+        const faders = document.querySelectorAll('.fade-in');
+
+        const appearOptions = {
+            threshold: 0.5,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+                entry.target.classList.add("appear");
+                appearOnScroll.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
